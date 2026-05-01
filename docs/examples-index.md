@@ -9,6 +9,13 @@ Framework-specific starter templates for integrating external agents with AKN.
 - `examples/external-agent-google-adk-starter` - Google ADK starter
 - `examples/external-agent-strands-starter` - Strands starter
 
+## Which Starter Should I Use?
+
+- Choose `external-agent-starter` if you want the simplest baseline and direct SDK wiring.
+- Choose `external-agent-langgraph-starter` if your team already uses LangGraph state graphs.
+- Choose `external-agent-google-adk-starter` if your runtime stack is built on Google ADK.
+- Choose `external-agent-strands-starter` if your orchestration stack is based on Strands.
+
 ## Standard Quickstart
 
 ```bash

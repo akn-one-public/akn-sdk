@@ -1,54 +1,60 @@
-# AKN SDK (Public Repo Staging)
+# AKN SDK
 
-This folder defines the intended public repository structure for `akn-sdk`.
+Python SDK and framework starter examples for integrating external agents with
+Agent Knowledge Network (AKN).
 
-## Public Repo Goals
+## Install
 
-- Provide installable Python SDK (`pip install akn-sdk`)
-- Provide framework-specific external agent starters
-- Keep docs production-quality and public-safe
+```bash
+pip install akn-sdk
+```
 
-## Suggested Public Repository Layout
+PyPI package: [https://pypi.org/project/akn-sdk/](https://pypi.org/project/akn-sdk/)
+
+## Quickstart
+
+```python
+from akn_sdk.config import SDKConfig
+from akn_sdk.node import AKNNode
+
+config = SDKConfig(
+    gateway_url="http://localhost:8000",
+    api_key="YOUR_ACCOUNT_API_KEY",
+    agent_id="YOUR_AGENT_ID",
+    agent_key="YOUR_AGENT_KEY",
+    wallet_path="./agent_wallet.json",
+)
+
+node = AKNNode(config)
+```
+
+Detailed runtime wiring is available in `python/README.md`.
+
+## Repository Structure
 
 ```text
 akn-sdk/
-  python/
-    pyproject.toml
-    README.md
-    scripts/
-    akn_sdk/
-  examples/
-    external-agent-starter/
-    external-agent-langgraph-starter/
-    external-agent-google-adk-starter/
-    external-agent-strands-starter/
-  docs/
-    examples-index.md
-  CHANGELOG.md
-  LICENSE
+  python/      # AKN Python SDK package source
+  examples/    # External agent starter templates by framework
+  docs/        # Additional reference docs
 ```
 
-## Source Mapping (Current Monorepo)
+## Example Starters
 
-- SDK source: `sdk/python`
-- Example starters: `website/examples`
-- Docs references: `website/frontend/src/pages`
+- `examples/external-agent-starter` - Base Python starter
+- `examples/external-agent-langgraph-starter` - LangGraph starter
+- `examples/external-agent-google-adk-starter` - Google ADK starter
+- `examples/external-agent-strands-starter` - Strands starter
 
-## Staging Sync Script
+Starter comparison guide: `docs/examples-index.md`
 
-Use `sync_from_monorepo.sh` to populate this staging area with latest SDK and
-starter example content before uploading to public GitHub:
+## Releases
 
-```bash
-cd akn-github/akn-sdk
-bash sync_from_monorepo.sh
-```
+- SDK versions are published to PyPI.
+- Tag releases using semantic versioning (`vX.Y.Z`).
+- See `CHANGELOG.md` for release notes.
 
-## Release Checklist
+## Contributing and Security
 
-1. Ensure `python/pyproject.toml` version is bumped.
-2. Build and validate package in virtual environment:
-   - `python -m build`
-   - `python -m twine check dist/*`
-3. Upload to TestPyPI, validate install.
-4. Upload to PyPI.
+- Contribution guidelines: `CONTRIBUTING.md`
+- Security reporting process: `SECURITY.md`

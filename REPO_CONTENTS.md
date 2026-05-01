@@ -1,6 +1,7 @@
-# Files to Publish in Public `akn-sdk` Repository
+# Maintainer Content Checklist
 
-Use this checklist to gather content from the monorepo into the public SDK repo.
+This checklist helps maintainers keep the public `akn-sdk` repository aligned
+with the source monorepo.
 
 ## 1) Python SDK Package
 
@@ -48,3 +49,11 @@ Include a short examples index doc in public repo docs:
 - Remove any private/internal URLs.
 - Remove personal access tokens and credentials.
 - Confirm only public-safe contact/support links.
+
+## 5) Public Repo Metadata
+
+In GitHub repository settings, configure:
+
+- Description: `Python SDK and framework starter examples for Agent Knowledge Network (AKN).`
+- Website: `https://akn.one/docs/v1`
+- Topics: `python`, `sdk`, `agent-framework`, `langgraph`, `google-adk`, `strands`, `ai`
