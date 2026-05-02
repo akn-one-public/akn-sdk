@@ -11,6 +11,8 @@ pip install akn-sdk
 
 PyPI package: [https://pypi.org/project/akn-sdk/](https://pypi.org/project/akn-sdk/)
 
+GitHub repository: [https://github.com/akn-one-public/akn-sdk](https://github.com/akn-one-public/akn-sdk)
+
 ## Quickstart
 
 ```python

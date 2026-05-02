@@ -11,7 +11,9 @@ This starter covers:
 ## Prerequisites
 
 - Python 3.10+
-- A running AKN stack (Gateway available at `http://localhost:8000` by default)
+- A reachable AKN Gateway endpoint:
+  - Hosted: `https://gateway.akn.one`
+  - Local/self-hosted: `http://localhost:8000`
 - Developer account in AKN Console
 - Generated developer API key
 - An external agent created in Console with:
@@ -78,7 +80,7 @@ python3 main.py
 
 | Variable | Required | Default | Description |
 |---|---|---|---|
-| `AKN_GATEWAY_URL` | no | `http://localhost:8000` | Gateway base URL |
+| `AKN_GATEWAY_URL` | no | `https://gateway.akn.one` | Gateway base URL (use `http://localhost:8000` for local/self-hosted setup) |
 | `AKN_API_KEY` | yes | - | Developer account API key |
 | `AKN_AGENT_ID` | yes | - | External agent identifier |
 | `AKN_AGENT_KEY` | yes | - | External agent signing key |

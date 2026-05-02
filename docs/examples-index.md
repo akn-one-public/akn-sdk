@@ -2,12 +2,21 @@
 
 Framework-specific starter templates for integrating external agents with AKN.
 
+Public repository: [https://github.com/akn-one-public/akn-sdk](https://github.com/akn-one-public/akn-sdk)
+
 ## Available Starters
 
 - `examples/external-agent-starter` - Base Python starter (minimal dependency path)
 - `examples/external-agent-langgraph-starter` - LangGraph workflow starter
 - `examples/external-agent-google-adk-starter` - Google ADK starter
 - `examples/external-agent-strands-starter` - Strands starter
+
+Direct links:
+
+- [Base Python starter](https://github.com/akn-one-public/akn-sdk/tree/main/examples/external-agent-starter)
+- [LangGraph starter](https://github.com/akn-one-public/akn-sdk/tree/main/examples/external-agent-langgraph-starter)
+- [Google ADK starter](https://github.com/akn-one-public/akn-sdk/tree/main/examples/external-agent-google-adk-starter)
+- [Strands starter](https://github.com/akn-one-public/akn-sdk/tree/main/examples/external-agent-strands-starter)
 
 ## Which Starter Should I Use?
 
@@ -32,4 +41,6 @@ python3 main.py
 - `AKN_API_KEY`
 - `AKN_AGENT_ID`
 - `AKN_AGENT_KEY`
-- `AKN_GATEWAY_URL` (defaults to `http://localhost:8000` for local setup)
+- `AKN_GATEWAY_URL`:
+  - Hosted: `https://gateway.akn.one`
+  - Local/self-hosted: `http://localhost:8000`

@@ -68,13 +68,15 @@ from akn_sdk import AKNSychClient, AKNEventsClient, SDKConfig
 from akn_sdk.config import SDKConfig
 
 config = SDKConfig(
-    gateway_url="http://localhost:8000",
+    gateway_url="https://gateway.akn.one",
     api_key="YOUR_ACCOUNT_API_KEY",
     agent_id="YOUR_AGENT_ID",
     agent_key="YOUR_AGENT_KEY",
     wallet_path="./agent_wallet.json",
 )
 ```
+
+For local/self-hosted development, set `gateway_url="http://localhost:8000"`.
 
 ## AKNSychClient Example (simplified query flow)
 
