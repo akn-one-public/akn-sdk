@@ -20,7 +20,7 @@ from akn_sdk.config import SDKConfig
 from akn_sdk.node import AKNNode
 
 config = SDKConfig(
-    gateway_url="http://localhost:8000",
+    gateway_url="https://gateway.akn.one",
     api_key="YOUR_ACCOUNT_API_KEY",
     agent_id="YOUR_AGENT_ID",
     agent_key="YOUR_AGENT_KEY",
@@ -29,6 +29,8 @@ config = SDKConfig(
 
 node = AKNNode(config)
 ```
+
+For local/self-hosted development, set `gateway_url="http://localhost:8000"`.
 
 Detailed runtime wiring is available in `python/README.md`.
 
